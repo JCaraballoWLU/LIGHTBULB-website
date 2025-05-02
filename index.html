@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L.I.G.H.T.B.U.L.B.</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #00e6e6;
+            --dark-bg: #001418;
+            --card-bg: #002530;
+            --text-color: #ffffff;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+        }
+        
+        .navbar {
+            background-color: transparent;
+            padding: 1.5rem 0;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-link {
+            color: var(--primary-color) !important;
+            margin-left: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .logo-icon {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .hero-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        h1.display-1 {
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+        
+        .team-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 230, 230, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 230, 230, 0.2);
+        }
+        
+        .team-img-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 2rem auto 1rem;
+            background-color: #1c3f4a;
+        }
+        
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-name {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.25rem;
+        }
+        
+        .team-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .team-bio {
+            padding: 0 1.5rem 2rem;
+            text-align: left;
+        }
+        
+        .contact-section {
+            padding: 4rem 0;
+            background-color: rgba(0, 37, 48, 0.5);
+        }
+        
+        .footer {
+            padding: 2rem 0;
+            background-color: rgba(0, 20, 27, 0.9);
+        }
+        
+        /* Glowing effect for logo */
+        .logo-glow {
+            filter: drop-shadow(0 0 5px rgba(0, 230, 230, 0.7));
+        }
+        
+        /* Circuit lines in bulb icon */
+        .circuit-lines {
+            stroke: var(--primary-color);
+            stroke-width: 2;
+        }
+        
+        @media (max-width: 768px) {
+            h1.display-1 {
+                font-size: 3rem;
+            }
+            
+            .team-card {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <svg class="logo-icon logo-glow" width="40" height="40" viewBox="0 0 40 40">
+                    <!-- Lightbulb outline -->
+                    <path d="M20 5 C13 5 8 10 8 17 C8 21 10 24 13 26 L13 31 L27 31 L27 26 C30 24 32 21 32 17 C32 10 27 5 20 5 Z" 
+                          fill="none" stroke="#00e6e6" stroke-width="2"/>
+                    <!-- Bulb base -->
+                    <rect x="15" y="31" width="10" height="4" fill="#00e6e6" />
+                    <!-- Circuit lines in bulb -->
+                    <line x1="20" y1="10" x2="20" y2="15" class="circuit-lines" />
+                    <line x1="20" y1="15" x2="16" y2="19" class="circuit-lines" />
+                    <line x1="20" y1="15" x2="24" y2="19" class="circuit-lines" />
+                    <circle cx="16" cy="19" r="1" fill="#00e6e6" />
+                    <circle cx="24" cy="19" r="1" fill="#00e6e6" />
+                    <circle cx="20" cy="23" r="1" fill="#00e6e6" />
+                    <line x1="20" y1="15" x2="20" y2="23" class="circuit-lines" />
+                </svg>
+                L.I.G.H.T.B.U.L.B.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PROJECTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-1">ABOUT US</h1>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8">
+                    <p class="lead">
+                        We're a team of innovators passionate about creating intelligent solutions
+                        that illuminate possibilities and drive sustainable change.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Team Member 1 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="team-card text-center">
+                        <div class="team-img-container">
+                            <img src="images/team/lakpa.jpg" alt="Lakpa Sherpa" class="team-img">
+                        </div>
+                        <h3 class="team-name mt-4">Lakpa Sherpa</h3>
+                        <h4 class="team-title">AI Engineer</h4>
+                        <div class="team-bio">
+                            <p>
+                                Driven software engineering student at Washington and Lee University, 
+                                passionate about creating innovative solutions. Proven problem-solver 
+                                with strong technical skills in Python, Java, and JavaScript, and a 
+                                growing interest in AI, machine learning, and full stack development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="team-card text-center">
+                        <div class="team-img-container">
+                            <img src="images/team/ryman.jpg" alt="Ryman Smith" class="team-img">
+                        </div>
+                        <h3 class="team-name mt-4">Ryman Smith</h3>
+                        <h4 class="team-title">Business Lead</h4>
+                        <div class="team-bio">
+                            <p>
+                                Accounting and Economics student at Washington and Lee, co-founder of the
+                                Sustainable Innovation Investment Society. Passionate about finance and
+                                the financial world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="team-card text-center">
+                        <div class="team-img-container">
+                            <img src="images/team/joshua.jpg" alt="Joshua Caraballo" class="team-img">
+                        </div>
+                        <h3 class="team-name mt-4">Joshua Caraballo</h3>
+                        <h4 class="team-title">Assistant Builder</h4>
+                        <div class="team-bio">
+                            <p>
+                                Art History and Accounting student at Washington. Also a part-time artist.
+                                Passionate about takes and the Italian Renaissance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="mb-4" style="color: var(--primary-color);">OUR MISSION</h2>
+                    <p class="lead mb-5">
+                        At L.I.G.H.T.B.U.L.B., we're dedicated to illuminating innovative paths forward 
+                        through cutting-edge technology and sustainable business practices. We combine AI 
+                        expertise with financial acumen and creative thinking to develop solutions that 
+                        matter.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: var(--primary-color);">OUR VALUES</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100" style="background-color: var(--card-bg); border: 1px solid rgba(0,230,230,0.1);">
+                        <div class="card-body text-center p-4">
+                            <svg width="60" height="60" viewBox="0 0 40 40" class="mb-3">
+                                <circle cx="20" cy="20" r="15" fill="none" stroke="#00e6e6" stroke-width="2"/>
+                                <path d="M15 20 L18 23 L25 16" stroke="#00e6e6" stroke-width="2" fill="none"/>
+                            </svg>
+                            <h3 style="color: var(--primary-color);">Innovation</h3>
+                            <p>We push boundaries and challenge the status quo to create groundbreaking solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100" style="background-color: var(--card-bg); border: 1px solid rgba(0,230,230,0.1);">
+                        <div class="card-body text-center p-4">
+                            <svg width="60" height="60" viewBox="0 0 40 40" class="mb-3">
+                                <path d="M20 5 C12 5 5 12 5 20 C5 28 12 35 20 35 C28 35 35 28 35 20 C35 12 28 5 20 5 Z" 
+                                      fill="none" stroke="#00e6e6" stroke-width="2"/>
+                                <path d="M15 15 L25 25 M25 15 L15 25" stroke="#00e6e6" stroke-width="2" fill="none"/>
+                            </svg>
+                            <h3 style="color: var(--primary-color);">Sustainability</h3>
+                            <p>We're committed to development that meets present needs without compromising the future.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100" style="background-color: var(--card-bg); border: 1px solid rgba(0,230,230,0.1);">
+                        <div class="card-body text-center p-4">
+                            <svg width="60" height="60" viewBox="0 0 40 40" class="mb-3">
+                                <circle cx="15" cy="18" r="6" fill="none" stroke="#00e6e6" stroke-width="2"/>
+                                <circle cx="25" cy="18" r="6" fill="none" stroke="#00e6e6" stroke-width="2"/>
+                                <path d="M12 27 C15 30 25 30 28 27" stroke="#00e6e6" stroke-width="2" fill="none"/>
+                            </svg>
+                            <h3 style="color: var(--primary-color);">Collaboration</h3>
+                            <p>We believe diverse perspectives fuel innovation and lead to the best solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="mb-5" style="color: var(--primary-color);">GET IN TOUCH</h2>
+                    <form>
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <input type="text" class="form-control" placeholder="Your Name" 
+                                       style="background-color: var(--card-bg); border: 1px solid rgba(0,230,230,0.3); color: var(--text-color);">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Your Email" 
+                                       style="background-color: var(--card-bg); border: 1px solid rgba(0,230,230,0.3); color: var(--text-color);">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" class="form-control" placeholder="Subject" 
+                                   style="background-color: var(--card-bg); border: 1px solid rgba(0,230,230,0.3); color: var(--text-color);">
+                        </div>
+                        <div class="mb-4">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" 
+                                     style="background-color: var(--card-bg); border: 1px solid rgba(0,230,230,0.3); color: var(--text-color);"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-lg px-5" 
+                                style="background-color: var(--primary-color); color: var(--dark-bg); font-weight: 600;">
+                            SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <a class="navbar-brand" href="#">
+                        <svg class="logo-icon logo-glow" width="30" height="30" viewBox="0 0 40 40">
+                            <!-- Lightbulb outline -->
+                            <path d="M20 5 C13 5 8 10 8 17 C8 21 10 24 13 26 L13 31 L27 31 L27 26 C30 24 32 21 32 17 C32 10 27 5 20 5 Z" 
+                                  fill="none" stroke="#00e6e6" stroke-width="2"/>
+                            <!-- Bulb base -->
+                            <rect x="15" y="31" width="10" height="4" fill="#00e6e6" />
+                            <!-- Circuit lines in bulb -->
+                            <line x1="20" y1="10" x2="20" y2="15" class="circuit-lines" />
+                            <line x1="20" y1="15" x2="16" y2="19" class="circuit-lines" />
+                            <line x1="20" y1="15" x2="24" y2="19" class="circuit-lines" />
+                            <circle cx="16" cy="19" r="1" fill="#00e6e6" />
+                            <circle cx="24" cy="19" r="1" fill="#00e6e6" />
+                            <circle cx="20" cy="23" r="1" fill="#00e6e6" />
+                            <line x1="20" y1="15" x2="20" y2="23" class="circuit-lines" />
+                        </svg>
+                        L.I.G.H.T.B.U.L.B.
+                    </a>
+                    <p class="mt-3">
+                        Illuminating Innovative Solutions<br>
+                        Washington and Lee University<br>
+                        Lexington, VA 24450
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 style="color: var(--primary-color);">QUICK LINKS</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" style="color: var(--text-color); text-decoration: none;">About Us</a></li>
+                        <li class="mb-2"><a href="#" style="color: var(--text-color); text-decoration: none;">Services</a></li>
+                        <li class="mb-2"><a href="#" style="color: var(--text-color); text-decoration: none;">Projects</a></li>
+                        <li class="mb-2"><a href="#" style="color: var(--text-color); text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="color: var(--primary-color);">CONNECT WITH US</h5>
+                    <div class="d-flex mt-3">
+                        <a href="#" class="me-3" style="color: var(--primary-color);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="me-3" style="color: var(--primary-color);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="me-3" style="color: var(--primary-color);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                            </svg>
+                        </a>
+                        <a href="#" style="color: var(--primary-color);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(0,230,230,0.2);">
+            <div class="text-center">
+                <p>&copy; 2025 L.I.G.H.T.B.U.L.B. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom CSS (extracted from inline styles) -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery (only if needed) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

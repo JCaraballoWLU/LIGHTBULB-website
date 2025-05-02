@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #00e6e6;
+    --dark-bg: #001418;
+    --card-bg: #002530;
+    --text-color: #ffffff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: transparent;
+    padding: 1.5rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: var(--primary-color) !important;
+    margin-left: 1.5rem;
+    font-weight: 500;
+}
+
+.logo-icon {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.hero-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+h1.display-1 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.team-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 230, 230, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 230, 230, 0.2);
+}
+
+.team-img-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 2rem auto 1rem;
+    background-color: #1c3f4a;
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-name {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.team-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.team-bio {
+    padding: 0 1.5rem 2rem;
+    text-align: left;
+}
+
+.contact-section {
+    padding: 4rem 0;
+    background-color: rgba(0, 37, 48, 0.5);
+}
+
+.footer {
+    padding: 2rem 0;
+    background-color: rgba(0, 20, 27, 0.9);
+}
+
+/* Glowing effect for logo */
+.logo-glow {
+    filter: drop-shadow(0 0 5px rgba(0, 230, 230, 0.7));
+}
+
+/* Circuit lines in bulb icon */
+.circuit-lines {
+    stroke: var(--primary-color);
+    stroke-width: 2;
+}
+
+/* Form styles */
+.form-control {
+    background-color: var(--card-bg); 
+    border: 1px solid rgba(0,230,230,0.3); 
+    color: var(--text-color);
+}
+
+.form-control:focus {
+    background-color: var(--card-bg);
+    border-color: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 230, 230, 0.25);
+}
+
+/* Card styles for values section */
+.card {
+    background-color: var(--card-bg); 
+    border: 1px solid rgba(0,230,230,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 230, 230, 0.2);
+}
+
+/* Animation class for team cards */
+.team-card.animated {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1.display-1 {
+        font-size: 3rem;
+    }
+    
+    .team-card {
+        margin-bottom: 2rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .team-img-container {
+        width: 120px;
+        height: 120px;
+    }
+}
